@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品详情页面</title>
+</head>
+<body>
+    <h1>商品详情页面</h1>
+    <div id="detail">
+
+    </div>
+    <script src="./utils/tools.js"></script>
+    <script>
+        // 获取url地址中的id
+        const searchParams = location.search.slice(1);
+        const [key,id] = searchParams.split('=')
+    
+
+        // 根据id请求商品信息
+        request('/goods/'+id,function(data){
+            console.log('data',data)
+        })
+    </script>
+</body>
+</html>
